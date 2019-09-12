@@ -57,3 +57,376 @@ html, body {
     height: 100%;
 }
 
+html{
+	font-size: 62.5%;
+}
+
+// *************** MY CODE
+
+// ********** GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Poppins|Roboto&display=swap');
+
+@parge-text: 'Poppins', sans-serif;
+@company-name: 'Merriweather', serif;
+@header-text: 'Roboto', sans-serif;
+
+
+//********* border
+@boxAround: 1px solid black;
+
+// ************ Mixins
+.center(){
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.cure(){
+	border-top-left-radius: 70px;
+	border-bottom-right-radius: 70px;
+}
+
+.line(){
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.form-input(){
+	background: #232323;
+	border: 1px solid black;
+	padding: 3% 0;;;
+	width: 100%;
+	color: white;
+	margin: 3% 0;
+	font-family: @parge-text;
+	font-size: 2rem;
+}
+
+
+// ******** The div that is wrap around my resume
+.wrapper{
+	width: 880px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	.line();
+	
+}
+
+//******************* The header of page
+
+header{
+
+	background-color: #232323;
+	padding: 2%;
+	border-bottom-left-radius: 70px;
+	border-bottom-right-radius: 70px;
+	.center();
+
+	nav{
+		display: flex;
+		justify-content: center;
+		a{
+			width: 50%;
+			text-decoration: none;
+			font-size: 2rem;
+			text-align: center;
+			color: white;
+			transition: 0.3s ease-out;
+		}
+
+		a:hover{
+			color: lightblue;
+		}
+	}
+}
+
+//*********************** THE IMAGE AND SUMMARY
+
+.top-main{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 2% 0;
+	.center();
+
+	.img{
+		
+		min-width: 0;
+		margin: 5px;
+
+		img{
+			max-width: 100%;
+			max-height: 450px;
+		}
+	}
+
+
+	// ********* THE SUMMARY PART 
+
+	.summary{
+
+		border: @boxAround;
+		// padding: 2%;
+		padding: 10px;
+		.cure();
+		.center();
+		
+		h2{
+			text-align: center;
+			font-size: 3rem;
+			font-family: @header-text;
+		}
+
+		p{
+			text-align: center;
+			font-size: 1.4rem;
+			padding: 2%;
+			font-family: @parge-text;
+		}
+	}
+
+}
+
+// ***************** TITLE
+
+.title{
+
+	h2{
+		text-align: center;
+		font-family: @header-text;
+		font-size: 2rem;
+
+		@media (max-width: 500px){
+			font-size: 3rem;
+		}
+	}
+
+	hr{
+		width: 80%;
+		border-top: 3px lightblue solid;
+	}
+}
+
+
+//****************** THE SKILL PART 
+
+.skills{
+	display: flex;
+	justify-content: space-evenly;
+	margin: 1% 0;
+	padding: 2%;
+	// flex-wrap: wrap;
+
+
+
+	.box{
+
+		border: @boxAround;
+		padding: 3%;
+		border-top-left-radius: 45px;
+		margin: 3%;
+
+		h4{
+			font-size: 1.8rem;
+			text-decoration: underline;	
+			font-family: @header-text;
+		}
+
+		ul{
+			margin-top: 13%;
+			font-size: 1.3rem;
+			font-family: @parge-text;
+			text-align: center;
+			line-height: 01.9rem;
+		}
+
+		@media (max-width:500px){
+			h4{
+				text-align: center;
+			}
+
+			ul{
+				margin-top: 3%;;
+			}
+		}
+
+		@media (max-width:650px){
+			
+			h4{
+				text-align: center;
+			}
+
+			ul{
+				margin-top: 3%;;
+			}
+		}
+	}
+	@media (max-width: 500px){
+		flex-direction: column;
+	}
+
+	@media (max-width: 650px){
+		flex-direction: column;
+	}
+}
+
+
+// **************** WORK PLACE
+
+.work-place{
+
+	display: flex;
+	justify-content: space-evenly;
+	.center();
+	padding: 2%;
+	flex-flow: wrap;
+	margin: 0 0 3%;
+
+	.card{
+		width: 20%;
+		border: @boxAround;
+		padding: 4%;
+		.cure();
+
+		h2{
+			font-family: @company-name;
+			font-size: 1.8rem;
+			text-decoration: underline;
+			margin-bottom: 4%;
+			text-align: center;
+		}
+
+		h5{
+			font-family: @parge-text;
+			margin: 2% 0;
+			font-size: 1.2rem;
+			text-align: center;
+		}
+
+		h3{
+			text-align: left;
+			font-family: @header-text;
+			font-size: 1.9rem;
+			border-bottom: 3px lightblue solid;
+		}
+
+		p{
+			font-family: @parge-text;
+			text-align: center;
+			font-size: 1.3rem;
+		}
+
+		@media (max-width:800px){
+			width: 100%;
+			margin: 0 0 3%;
+
+			h3{
+				text-align: center;
+			}
+		}
+	}
+
+
+
+}
+
+// **************** FOOTER
+
+footer{
+	display: flex;
+	justify-content: center;
+	background-color: #232323;
+	padding: 2%;
+	border-top-left-radius: 79px;
+	border-top-right-radius: 79px;
+
+	.center();
+
+	p{
+		color: white;
+		font-size: 2.5rem;
+		font-family: @parge-text;
+	}
+}
+
+// ************* Contact Seaction
+
+
+.Contact-title{
+	display: flex;
+	justify-content: center;
+	margin: 6%;
+
+	h1{
+		font-family: @header-text;
+		font-size: 5rem;
+		color: aqua;
+		text-decoration: underline;
+	}
+}
+
+
+
+.form{
+	margin: 6% 0;
+
+	form{
+		border: @boxAround;
+		padding: 4%;
+		.cure();
+
+		label{
+			font-family: @parge-text;
+			font-size: 2rem;
+			margin: 2% 0;
+		}
+
+		.name{
+			
+			input{
+				.form-input();
+			}
+
+			::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+				color: white;
+			}
+		}
+		
+		.email{
+			input{
+				.form-input();
+			}
+
+			::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+				color: white;
+			}
+		}
+
+		.Message{
+			textarea{
+				.form-input();
+			}
+
+			::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+				color: white;
+			}
+		}
+
+		button{
+			background-color: aqua;
+			cursor: pointer;
+			color: black;
+			border: 1px black solid;
+			outline: none;
+			padding: 3% 9%;
+			margin: 4% 0;
+			transition: 0.3s ease-out;
+			font-size: 2rem;
+		}
+
+		button:hover{
+			background: white;
+			padding: 3% 16%;
+		}
+	}
+}
