@@ -352,3 +352,85 @@ footer p {
   font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
 }
+.Contact-title {
+  display: flex;
+  justify-content: center;
+  margin: 6%;
+}
+.Contact-title h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+  color: aqua;
+  text-decoration: underline;
+}
+.form {
+  margin: 6% 0;
+}
+.form form {
+  border: 1px solid black;
+  padding: 4%;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+}
+.form form label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin: 2% 0;
+}
+.form form .name input {
+  background: #232323;
+  border: 1px solid black;
+  padding: 3% 0;
+  width: 100%;
+  color: white;
+  margin: 3% 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+.form form .name ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: white;
+}
+.form form .email input {
+  background: #232323;
+  border: 1px solid black;
+  padding: 3% 0;
+  width: 100%;
+  color: white;
+  margin: 3% 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+.form form .email ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: white;
+}
+.form form .Message textarea {
+  background: #232323;
+  border: 1px solid black;
+  padding: 3% 0;
+  width: 100%;
+  color: white;
+  margin: 3% 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+.form form .Message ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: white;
+}
+.form form button {
+  background-color: aqua;
+  cursor: pointer;
+  color: black;
+  border: 1px black solid;
+  outline: none;
+  padding: 3% 9%;
+  margin: 4% 0;
+  transition: 0.3s ease-out;
+  font-size: 2rem;
+}
+.form form button:hover {
+  background: white;
+  padding: 3% 16%;
+}
